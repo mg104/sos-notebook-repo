@@ -8,7 +8,7 @@ COPY ./custom-r-functions.R /home/jovyan/work/my-scripts/custom-r-functions.R
 
 USER root
 
-RUN mamba install -c conda-forge quandl -Y
+RUN mamba install -c conda-forge quandl -y
 
 USER jovyan
 
