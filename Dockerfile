@@ -10,5 +10,7 @@ USER root
 
 RUN mamba install -c conda-forge r-quandl=2.11.0 -y
 
+RUN pip install jupyterlab-sos==0.10.1
+
 USER jovyan
 
