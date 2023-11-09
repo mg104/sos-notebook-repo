@@ -20,7 +20,7 @@ COPY jupyterlab-cull-vars.sh /jupyterlab-cull-vars.sh
 
 USER root
 
-RUN mamba install -c conda-forge r-quandl=2.11.0 -y
+RUN mamba install -c conda-forge r-quandl=2.11.0 yfinance=0.2.31 -y
 
 RUN pip install jupyterlab-sos==0.10.1
 
