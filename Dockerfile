@@ -20,7 +20,18 @@ COPY jupyterlab-cull-vars.sh /jupyterlab-cull-vars.sh
 
 USER root
 
-RUN mamba install -c conda-forge r-quandl=2.11.0 yfinance=0.2.31 -y
+RUN mamba install -c conda-forge \
+	 r-quandl=2.11.0 \
+	 yfinance=0.2.31 \
+	 requests=2.31.0 \
+	 beautifulsoup4=4.12.2 \
+	 scrapy=2.11.0 \
+	 selenium=4.15.1 \
+	 playwright=1.39.0 \
+	 lxml=4.9.3 \
+	 urllib3=2.0.7 \
+	 mechanicalsoup=1.2.0 \
+	 chromium -y 
 
 RUN pip install jupyterlab-sos==0.10.1
 
