@@ -31,6 +31,7 @@ RUN mamba install -c conda-forge \
 	 lxml=4.9.3 \
 	 urllib3=2.0.7 \
 	 mechanicalsoup=1.2.0 \
+	 elementpath=4.1.5 \
 	 chromium -y 
 
 RUN pip install jupyterlab-sos==0.10.1
