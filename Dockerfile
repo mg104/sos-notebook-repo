@@ -27,16 +27,17 @@ RUN mamba install -c conda-forge \
 	 beautifulsoup4=4.12.2 \
 	 scrapy=2.11.0 \
 	 selenium=4.15.1 \
-	 playwright=1.39.0 \
-	 lxml=4.9.3 \
+	 lxml \
 	 urllib3=2.0.7 \
 	 mechanicalsoup=1.2.0 \
 	 elementpath=4.1.5 \
-	 chromium -y 
+	 -y 
+
+RUN mamba install -c microsoft playwright -y
 
 RUN pip install jupyterlab-sos==0.10.1
 
-RUN apt-get install procps
+#RUN apt-get install procps chromium -y
 
 RUN chmod +x /jupyterlab-cull-vars.sh
 
